@@ -2,7 +2,7 @@ name: Update WakaTime Stats SVG
 
 on:
   schedule:
-    - cron: "0 2 * * *" # every day
+    - cron: "0 15 * * *" # every day(CST 23:00)
   workflow_dispatch:
 
 permissions:
