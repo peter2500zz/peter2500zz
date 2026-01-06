@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<img src="wakatime/stats.svg?v=20260106" height="300"/>
+<img src="wakatime/stats.svg?v=20260106"/>
