@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<img src="wakatime/stats.svg?v=20260106"/>
+[![WakaTime Stats](wakatime/stats.svg?v=20260106)](https://wakatime.com/@peter2500zz)
