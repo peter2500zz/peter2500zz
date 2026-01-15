@@ -1,4 +1,4 @@
-```stderr
+```rust
 > cargo run
    Compiling me v20.3.12 (/proc/self)
 error[E0277]: the size for values of type `life` cannot be known at compilation time
