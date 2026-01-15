@@ -1,4 +1,4 @@
-name: Update WakaTime Stats SVG
+name: Update README everyday
 
 on:
   schedule:
@@ -34,6 +34,28 @@ jobs:
 
           sed -i -E "s#(wakatime/stats\.svg)\?v=[0-9]+#\1?v=$V#g" README.md
           sed -i -E "s#(wakatime/stats\.svg)(\"|')#\1?v=$V\2#g" README.md
+
+      - name: Calculate my age
+        id: version
+        shell: bash
+        run: |
+          d0=2005-10-02
+          off=8
+          d1=$(date -u -d "+$off hour" +%F)
+
+          y=$(( ${d1:0:4}-${d0:0:4} ))
+          m=$(( ${d1:5:2}-${d0:5:2} ))
+          d=$(( ${d1:8:2}-${d0:8:2} ))
+
+          ((d<0)) && m=$((m-1)) && d=$((d+$(date -d "$d1 -1 month" +%d)))
+          ((m<0)) && y=$((y-1)) && m=$((m+12))
+
+          VERSION="$y.$m.$d"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - name: Update my age
+        run: |
+          sed -i -E "s/me v[0-9]+\.[0-9]+\.[0-9]+/me v$VERSION/" README.md
 
       - name: Commit changes to repo
         run: |
