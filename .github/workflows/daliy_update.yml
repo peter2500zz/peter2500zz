@@ -39,7 +39,7 @@ jobs:
         id: version
         shell: bash
         run: |
-          d0=2005-10-02
+          d0=$(date -u -d "2005-10-02 -1 day" +%F)
           off=8
           d1=$(date -u -d "+$off hour" +%F)
 
