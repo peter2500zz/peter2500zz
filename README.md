@@ -1,6 +1,6 @@
 ```rust
 > cargo run
-   Compiling me v20.10.27
+   Compiling me v20.10.28
 error[E0277]: the size for values of type `life` cannot be known at compilation time
  --> src\peter.rs:2:5
   |
